@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 //댄서 정보 저장소
 public class DancerRepository {
 
-    private final Map<String, Dancer>  dancerMap = new HashMap<>();
+    private static final Map<String, Dancer>  dancerMap = new HashMap<>();
 
     //댄서 저장기능
 
@@ -50,5 +50,9 @@ public class DancerRepository {
 //            danceList.add(dancer);
 //        }
 //        return danceList;
+    }
+    // 댄서 맵에서 댄서 객체를 삭제하는 기능
+    public void delete(String name){
+        dancerMap.remove(name);
     }
 }
